@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/checkRequestFragment">
+
+    <fragment
+        android:id="@+id/checkRequestFragment"
+        android:name="com.example.cloudinteractive_jimmy.view.CheckRequestFragment"
+        android:label="check_request_fragment"
+        tools:layout="@layout/check_request_fragment" >
+        <action
+            android:id="@+id/action_checkRequestFragment_to_allImageFragment"
+            app:destination="@id/allImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allImageFragment"
+        android:name="com.example.cloudinteractive_jimmy.view.AllImageFragment"
+        android:label="all_image_fragment"
+        tools:layout="@layout/all_image_fragment" >
+        <action
+            android:id="@+id/action_allImageFragment_to_selectImageFragment"
+            app:destination="@id/selectImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectImageFragment"
+        android:name="com.example.cloudinteractive_jimmy.view.SelectImageFragment"
+        android:label="select_image_fragment"
+        tools:layout="@layout/select_image_fragment" />
+</navigation>
