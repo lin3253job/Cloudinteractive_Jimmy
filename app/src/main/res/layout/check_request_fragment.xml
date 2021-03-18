@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/my_name"
+        android:textSize="@dimen/sp_25"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
 
     <Button
         android:id="@+id/nextPage_button"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dp_80"
         android:layout_height="wrap_content"
         android:text="@string/RequestApi"
         app:layout_constraintBottom_toBottomOf="parent"

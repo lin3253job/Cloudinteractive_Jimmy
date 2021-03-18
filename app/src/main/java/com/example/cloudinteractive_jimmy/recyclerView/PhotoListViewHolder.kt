@@ -3,7 +3,7 @@ package com.example.cloudinteractive_jimmy.recyclerView
 import android.view.View
 import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.RecyclerView
-import com.enzo.livedata_mvvm.imageCache.DoubleCache
+import com.example.cloudinteractive_jimmy.imageCache.DoubleCache
 import com.example.cloudinteractive_jimmy.imageCache.ImageLoader
 import com.example.cloudinteractive_jimmy.imageCache.MD5Encoder
 import com.example.cloudinteractive_jimmy.R

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import com.enzo.livedata_mvvm.imageCache.DoubleCache
+import com.example.cloudinteractive_jimmy.imageCache.DoubleCache
 import com.example.cloudinteractive_jimmy.imageCache.ImageLoader
 import com.example.cloudinteractive_jimmy.imageCache.MD5Encoder
 import com.example.cloudinteractive_jimmy.databinding.SelectImageFragmentBinding

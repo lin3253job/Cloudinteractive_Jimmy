@@ -37,7 +37,10 @@ object ImageLoader {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+
+
         val bitmap = mImageCache?.get(md5)
+
         if (bitmap != null) {
             if (md5 == imageView.tag) {
                 imageView.alpha = 0f

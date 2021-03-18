@@ -1,9 +1,6 @@
-package com.enzo.livedata_mvvm.imageCache
+package com.example.cloudinteractive_jimmy.imageCache
 
 import android.graphics.Bitmap
-import com.example.cloudinteractive_jimmy.imageCache.DiskCache
-import com.example.cloudinteractive_jimmy.imageCache.ImageCache
-import com.example.cloudinteractive_jimmy.imageCache.MemoryCache
 
 class DoubleCache: ImageCache {
     var memoryCache: ImageCache = MemoryCache()

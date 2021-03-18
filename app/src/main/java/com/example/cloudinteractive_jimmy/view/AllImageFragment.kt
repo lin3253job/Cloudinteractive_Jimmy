@@ -20,7 +20,7 @@ import com.example.cloudinteractive_jimmy.viewModel.AllImageViewModel
 import com.example.cloudinteractive_jimmy.viewModel.SharedViewModel
 
 
-class AllImageFragment : Fragment(), PhotoListAdapter.OnItemClickListener {
+class AllImageFragment : Fragment() {
 
     private val allImageViewModel by viewModels<AllImageViewModel>()
 
@@ -48,8 +48,12 @@ class AllImageFragment : Fragment(), PhotoListAdapter.OnItemClickListener {
 
         photoListAdapter =
             PhotoListAdapter(
-                this,
-                allImageViewModel
+                onItemClick = { photo ->
+                    sharedViewModel.openItem(photo)
+
+
+                },
+                allImageViewModel = allImageViewModel
             )
 
         binding.recyclerview.layoutManager =
@@ -77,6 +81,10 @@ class AllImageFragment : Fragment(), PhotoListAdapter.OnItemClickListener {
             updateStatus(photoStatus)
         })
 
+        sharedViewModel.checkNavigate.observe(viewLifecycleOwner, Observer {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_allImageFragment_to_selectImageFragment)
+        })
     }
 
 
@@ -86,14 +94,7 @@ class AllImageFragment : Fragment(), PhotoListAdapter.OnItemClickListener {
     }
 
 
-    //call back 執行跳轉
-    override fun onItemClick(photo: DatabasePhoto, v: View) {
 
-        //存放頁面共同資料
-        sharedViewModel.openItem(photo)
-        Navigation.findNavController(v)
-            .navigate(R.id.action_allImageFragment_to_selectImageFragment)
-    }
 
 
     private fun updateStatus(photoStatus: PhotoStatus) {

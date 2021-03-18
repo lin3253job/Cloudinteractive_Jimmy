@@ -10,7 +10,7 @@ import com.example.cloudinteractive_jimmy.viewModel.AllImageViewModel
 import kotlinx.coroutines.Job
 
 class PhotoListAdapter(
-    private val listener: OnItemClickListener, private val allImageViewModel: AllImageViewModel
+    private val onItemClick:(DatabasePhoto) -> Unit, private val allImageViewModel: AllImageViewModel
 ) :
     ListAdapter<DatabasePhoto, PhotoListViewHolder>(
         PhotoDiffItemCallBack()
@@ -32,14 +32,10 @@ class PhotoListAdapter(
 
 
         holder.itemView.setOnClickListener {
-            listener.onItemClick(databasePhoto, it)
+            onItemClick(databasePhoto)
         }
 
     }
 
-    //跳轉頁面及存放資料的call back
-    interface OnItemClickListener {
-        fun onItemClick(photo: DatabasePhoto, v: View)
-    }
 
 }

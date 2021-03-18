@@ -3,6 +3,7 @@ package com.example.cloudinteractive_jimmy.viewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.cloudinteractive_jimmy.SingleLiveEvent
 import com.example.cloudinteractive_jimmy.model.DatabasePhoto
 
 
@@ -15,8 +16,14 @@ class SharedViewModel : ViewModel() {
     val selectedItem: LiveData<DatabasePhoto>
         get() = _selectedItem
 
+
+    var checkNavigate = SingleLiveEvent<Boolean>()
+
+
+
     //點選RecyclerView裡的一個Item
     fun openItem(databasePhoto: DatabasePhoto) {
+        checkNavigate.value = true
         _selectedItem.value = databasePhoto
     }
 }
