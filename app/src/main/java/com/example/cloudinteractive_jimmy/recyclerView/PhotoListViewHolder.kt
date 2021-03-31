@@ -23,7 +23,7 @@ class PhotoListViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
     private val photoImageView = itemView.photo_imageView
 
-    //使用job解決復用
+    //使用job解決複用
     private var job: Job? = null
 
 

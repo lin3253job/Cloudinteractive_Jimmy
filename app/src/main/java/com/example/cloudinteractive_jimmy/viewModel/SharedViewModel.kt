@@ -20,7 +20,6 @@ class SharedViewModel : ViewModel() {
     var checkNavigate = SingleLiveEvent<Boolean>()
 
 
-
     //點選RecyclerView裡的一個Item
     fun openItem(databasePhoto: DatabasePhoto) {
         checkNavigate.value = true

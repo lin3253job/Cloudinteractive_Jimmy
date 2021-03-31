@@ -72,7 +72,7 @@ class AllImageViewModel(
             },
 
             onFailure = {
-                Log.e("failure??", it.toString())
+                Log.e("failure?", it.toString())
                 return PhotoStatus.LinkFailure
             }
         )
